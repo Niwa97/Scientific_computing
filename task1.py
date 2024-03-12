@@ -19,7 +19,7 @@ print(isinstance(True, int))   # True - True is instance of int from historic re
 print(isinstance(True, bool))  # True - True is instance of bool in newest wersions of python
 
 #1.3
-odd = [x for x in range(101) if x%2==1]
+odd = [x**2 for x in range(102) if x%2==1]
 s = sum(odd)
 print(s)
 
