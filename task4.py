@@ -22,6 +22,7 @@ def reverse_range_iter(L, left, right):
     L[i] = L[right + left -i]
     L[right + left -i] = temp
   return L
+  
 def reverse_range_rec(L, left, right):
   if(left < right):
     temp = L[left]
@@ -31,6 +32,7 @@ def reverse_range_rec(L, left, right):
     right = right - 1
     reverse_range_rec(L, left, right)
   return L
+  
 L1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 L2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 L3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
