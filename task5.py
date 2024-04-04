@@ -27,19 +27,18 @@ def print_working_days(date1, date2):
     num_of_workdays = 0
     for day in all_days:
       if day.weekday() < 5:
+        print(day)
         num_of_workdays += 1
     return num_of_workdays
 
-print(print_working_days('2024-03-01','2024-03-28'))
+print_working_days('2024-03-01','2024-03-28')
 
 #3
-def random_walk(start):
+def random_walk(start, num_of_steps):
   random.seed()
-  start = start + random.randrange(-1, 2, 2)
-  return start
-
-
-init = 0
-for i in range(100):
-  print(init)
-  init = random_walk(init)
+  for _ in range(100):
+    yield start
+    start = start + random.randrange(-1, 2, 2)
+    
+for value in random_walk(0, 100):
+    print(value)
