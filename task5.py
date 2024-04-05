@@ -36,7 +36,7 @@ print_working_days('2024-03-01','2024-03-28')
 #3
 def random_walk(start, num_of_steps):
   random.seed()
-  for _ in range(100):
+  for _ in range(num_of_steps):
     yield start
     start = start + random.randrange(-1, 2, 2)
     
