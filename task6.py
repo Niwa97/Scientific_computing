@@ -8,7 +8,7 @@ class Vector:
         self.z = z
 
     def __repr__(self):
-      return "Vector("+self.x+","+self.y+","+self.z+")"
+      return "Vector("+str(self.x)+","+str(self.y)+","+str(self.z)+")"
 
     def __eq__(self, other):
       if(self.x == other.x and self.y == other.y and self.z == other.z):
