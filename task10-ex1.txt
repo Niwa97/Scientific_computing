@@ -1,0 +1,102 @@
+
+PS C:\Users\mariu\Documents\Różne\v> python -m venv DIR
+PS C:\Users\mariu\Documents\Różne\v> DIR\Scripts\activate
+
+Do you want to run software from this untrusted publisher?
+File C:\Users\mariu\Documents\Różne\v\DIR\Scripts\Activate.ps1 is published by CN=Python Software Foundation, O=Python
+Software Foundation, L=Beaverton, S=Oregon, C=US and is not trusted on your system. Only run scripts from trusted
+publishers.
+[V] Never run  [D] Do not run  [R] Run once  [A] Always run  [?] Help (default is "D"): R
+(DIR) PS C:\Users\mariu\Documents\Różne\v> pip install numpy
+Collecting numpy
+  Obtaining dependency information for numpy from https://files.pythonhosted.org/packages/16/2e/86f24451c2d530c88daf997cb8d6ac622c1d40d19f5a031ed68a4b73a374/numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata
+  Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl.metadata (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.0/61.0 kB 466.1 kB/s eta 0:00:00
+Downloading numpy-1.26.4-cp312-cp312-win_amd64.whl (15.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.5/15.5 MB 4.2 MB/s eta 0:00:00
+Installing collected packages: numpy
+Successfully installed numpy-1.26.4
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(DIR) PS C:\Users\mariu\Documents\Różne\v> pip install matplotlib
+Collecting matplotlib
+  Obtaining dependency information for matplotlib from https://files.pythonhosted.org/packages/7d/ca/e7bd1876a341ed8c456095962a582696cac1691cb6e55bd5ead15a755c5d/matplotlib-3.8.4-cp312-cp312-win_amd64.whl.metadata
+  Downloading matplotlib-3.8.4-cp312-cp312-win_amd64.whl.metadata (5.9 kB)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Obtaining dependency information for contourpy>=1.0.1 from https://files.pythonhosted.org/packages/78/38/a046bb0ebce6f530175d434e7364149e338ffe1069ee286ed8ba7f6481ee/contourpy-1.2.1-cp312-cp312-win_amd64.whl.metadata
+  Downloading contourpy-1.2.1-cp312-cp312-win_amd64.whl.metadata (5.8 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Obtaining dependency information for cycler>=0.10 from https://files.pythonhosted.org/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl.metadata
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Obtaining dependency information for fonttools>=4.22.0 from https://files.pythonhosted.org/packages/56/85/0a77382e3dd8528d7f13ee97415c82b36c4879023f226e2b98d012fce077/fonttools-4.51.0-cp312-cp312-win_amd64.whl.metadata
+  Downloading fonttools-4.51.0-cp312-cp312-win_amd64.whl.metadata (162 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.8/162.8 kB 1.4 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Obtaining dependency information for kiwisolver>=1.3.1 from https://files.pythonhosted.org/packages/63/50/2746566bdf4a6a842d117367d05c90cfb87ac04e9e2845aa1fa21f071362/kiwisolver-1.4.5-cp312-cp312-win_amd64.whl.metadata
+  Downloading kiwisolver-1.4.5-cp312-cp312-win_amd64.whl.metadata (6.5 kB)
+Requirement already satisfied: numpy>=1.21 in c:\users\mariu\documents\różne\v\dir\lib\site-packages (from matplotlib) (1.26.4)
+Collecting packaging>=20.0 (from matplotlib)
+  Obtaining dependency information for packaging>=20.0 from https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl.metadata
+  Downloading packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow>=8 (from matplotlib)
+  Obtaining dependency information for pillow>=8 from https://files.pythonhosted.org/packages/d3/23/3927d888481ff7c44fdbca3bc2a2e97588c933db46723bf115201377c436/pillow-10.3.0-cp312-cp312-win_amd64.whl.metadata
+  Downloading pillow-10.3.0-cp312-cp312-win_amd64.whl.metadata (9.4 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib)
+  Obtaining dependency information for pyparsing>=2.3.1 from https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl.metadata
+  Downloading pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib)
+  Obtaining dependency information for python-dateutil>=2.7 from https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib)
+  Obtaining dependency information for six>=1.5 from https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl.metadata
+  Downloading six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Downloading matplotlib-3.8.4-cp312-cp312-win_amd64.whl (7.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.7/7.7 MB 5.6 MB/s eta 0:00:00
+Downloading contourpy-1.2.1-cp312-cp312-win_amd64.whl (189 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 189.9/189.9 kB 11.2 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.51.0-cp312-cp312-win_amd64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 6.6 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.5-cp312-cp312-win_amd64.whl (56 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.0/56.0 kB 3.1 MB/s eta 0:00:00
+Downloading packaging-24.0-py3-none-any.whl (53 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 kB 2.7 MB/s eta 0:00:00
+Downloading pillow-10.3.0-cp312-cp312-win_amd64.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 6.4 MB/s eta 0:00:00
+Downloading pyparsing-3.1.2-py3-none-any.whl (103 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.2/103.2 kB 6.2 MB/s eta 0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 13.7 MB/s eta 0:00:00
+Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: six, pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, python-dateutil, matplotlib
+Successfully installed contourpy-1.2.1 cycler-0.12.1 fonttools-4.51.0 kiwisolver-1.4.5 matplotlib-3.8.4 packaging-24.0 pillow-10.3.0 pyparsing-3.1.2 python-dateutil-2.9.0.post0 six-1.16.0
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(DIR) PS C:\Users\mariu\Documents\Różne\v> pip install pandas
+Collecting pandas
+  Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/22/a5/a0b255295406ed54269814bc93723cfd1a0da63fb9aaf99e1364f07923e5/pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata
+  Downloading pandas-2.2.2-cp312-cp312-win_amd64.whl.metadata (19 kB)
+Requirement already satisfied: numpy>=1.26.0 in c:\users\mariu\documents\różne\v\dir\lib\site-packages (from pandas) (1.26.4)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\mariu\documents\różne\v\dir\lib\site-packages (from pandas) (2.9.0.post0)
+Collecting pytz>=2020.1 (from pandas)
+  Obtaining dependency information for pytz>=2020.1 from https://files.pythonhosted.org/packages/9c/3d/a121f284241f08268b21359bd425f7d4825cffc5ac5cd0e1b3d82ffd2b10/pytz-2024.1-py2.py3-none-any.whl.metadata
+  Downloading pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas)
+  Obtaining dependency information for tzdata>=2022.7 from https://files.pythonhosted.org/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl.metadata
+  Downloading tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.5 in c:\users\mariu\documents\różne\v\dir\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.16.0)
+Downloading pandas-2.2.2-cp312-cp312-win_amd64.whl (11.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.5/11.5 MB 3.1 MB/s eta 0:00:00
+Downloading pytz-2024.1-py2.py3-none-any.whl (505 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 505.5/505.5 kB 4.5 MB/s eta 0:00:00
+Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 345.4/345.4 kB 4.3 MB/s eta 0:00:00
+Installing collected packages: pytz, tzdata, pandas
+Successfully installed pandas-2.2.2 pytz-2024.1 tzdata-2024.1
+
+[notice] A new release of pip is available: 23.2.1 -> 24.0
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(DIR) PS C:\Users\mariu\Documents\Różne\v> deactivate
