@@ -62,8 +62,8 @@ u[:,0] = np.sin(x * (np.pi * 2))
 assert abs(u[0,0]) < 1e-6 and abs(u[Nx,0]) < 1e-6
 
 # boundary condition, x=0 and x=L
-u[0,:] = 1.0
-u[Nx,:] = 1.0
+u[0,:] = 0.0
+u[Nx,:] = 0.0
 
 u[1:-1,1] = u[1:-1,0] + (r*0.5)*( u[:-2,0] -2*u[1:-1,0] + u[2:,0] )
 
