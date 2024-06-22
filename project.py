@@ -8,37 +8,28 @@ def graph_creation(N):
   for i in range(N):
     G.add_node(i)
     for j in range(i+1,N):
-      p = rng.random()  
+      p = rng.random()
       G.add_edge(i, j, weight=round(p,2))
   return G
 
 def prim(G):
   N = G.number_of_nodes()
-  V = list(G.nodes())
-  E = list(G.edges)
-  W = nx.get_edge_attributes(G, "weight")
-  L = []
-  P = {}
-  L.append(V[0])
+  accessible_edges_weights = {}
   index = 0
   MST = nx.Graph()
-  MST.add_node(V[0])
-  while(len(L) < N):
-    P.update({y: W[y] for y in E if y[0]==V[index] or y[1]==V[index]})
-    P = dict(sorted(P.items(), key=lambda item: item[1]))
+  MST.add_node(index)
+  while(MST.number_of_nodes() < N):
+    neighbors = [(min(u, v), max(u, v)) for u, v in G.edges(index)]
+    accessible_edges_weights.update({y: nx.get_edge_attributes(G, "weight")[y] for y in neighbors})
     x = y = 0
-    while(x in L and y in L):
-      x,y = list(P.keys())[0]
-      P.pop((x,y))
-    MST.add_edge(x, y, weight = W[(x,y)])
-    if(y not in L):
+    while(MST.has_node(x) and MST.has_node(y)):
+      x,y = min(accessible_edges_weights, key=accessible_edges_weights.get)
+      accessible_edges_weights.pop((x,y))
+    if(not(MST.has_node(y))):
       index = y
-      L.append(V[index])
-      MST.add_node(V[index])
     else:
       index = x
-      L.append(V[index])
-      MST.add_node(V[index])
+    MST.add_edge(x, y, weight = nx.get_edge_attributes(G, "weight")[(x,y)])
   return MST
 
 G = graph_creation(6)
@@ -65,4 +56,5 @@ nx.draw_networkx_edge_labels(H, pos2, edge_labels_2)
 plt.show()
 
 T = nx.minimum_spanning_tree(G, algorithm='prim')
-sorted(T.edges(data=True))
+print(sorted(T.edges(data=True)))
+print(nx.utils.graphs_equal(H, T))
