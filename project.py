@@ -14,13 +14,14 @@ def graph_creation(N):
 
 def prim(G):
   N = G.number_of_nodes()
+  weights = nx.get_edge_attributes(G, "weight")
   accessible_edges_weights = {}
   index = 0
   MST = nx.Graph()
   MST.add_node(index)
   while(MST.number_of_nodes() < N):
     neighbors = [(min(u, v), max(u, v)) for u, v in G.edges(index)]
-    accessible_edges_weights.update({y: nx.get_edge_attributes(G, "weight")[y] for y in neighbors})
+    accessible_edges_weights.update({y: weights[y] for y in neighbors})
     x = y = 0
     while(MST.has_node(x) and MST.has_node(y)):
       x,y = min(accessible_edges_weights, key=accessible_edges_weights.get)
@@ -29,7 +30,7 @@ def prim(G):
       index = y
     else:
       index = x
-    MST.add_edge(x, y, weight = nx.get_edge_attributes(G, "weight")[(x,y)])
+    MST.add_edge(x, y, weight = weights[(x,y)])
   return MST
 
 G = graph_creation(6)
